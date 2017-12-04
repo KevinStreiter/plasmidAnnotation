@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@author: Kevin Streiter
+@author: Kevin Streiter & Andreas Ott
 """
 from Bio import SeqIO
 
