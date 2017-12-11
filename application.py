@@ -2,62 +2,38 @@
 """
 @author: Kevin Streiter & Andreas Ott
 """
+
 from Bio import SeqIO
+from SequenceRepository import *
 
-def scanFile(filename):
-    numbers = []
-    with open(filename) as f:
-        numbers.append(zip(*[line.split() for line in f])[1])
-    return list(map(int, numbers[0]))
-
-def saveGenes(record):
-    genes = []
-    for gene in record.features:
-        if(gene.type == "CDS"):
-            genes.append(gene)
-    return genes
-
-def index_genbank_features(genes, qualifier):
-    answer = dict()
-    for (index, feature) in enumerate(genes):
-        if qualifier in feature.qualifiers:
-            for value in feature.qualifiers[qualifier]:
-                if value in answer :
-                    print "WARNING - Duplicate key, please specify query"
-                    return answer
-                else:
-                    answer[value] = index
-    return answer
+vectors = SeqIO.parse("vectors-100.gb", "genbank")
 
 
-def calculateNumberOfSequencedBases(start, end, numbers):
-    return sum(numbers[start:end])
 
-cellulose = 'Cellulose__GSM463010_080606_HWI-EAS282_0007_FC305F9AAXX.7_coverage.txt'
-glukose = 'Glukose__GSM463006_080527_HWI-EAS282_0004_FC30316AAXX.1_coverage.txt'
+list_of_feature_types = ['promoter', 'oriT', 'rep_origin', 'primer_bind', 'terminator', 'misc_signal',
+                         'misc_recomb',
+                         'LTR', 'enhancer', '-35_signal', '-10_signal', 'RBS', 'polyA_signal',
+                         'sig_peptide', 'CDS',
+                         'protein_bind', 'misc_binding', 'mobile_element', 'mRNA', 'tRNA', 'rRNA']
 
-cellulose_numbers = scanFile(cellulose)
-glukose_numbers = scanFile(glukose)
+list_of_sequence = []
 
-print "--------------NUMBER OF SEQUENCED BASES--------------"
-print "Cellulose:", sum( cellulose_numbers)
-print "Glukose:", sum(glukose_numbers)
 
-record = SeqIO.read(open("genome_sso.gb","r"),"genbank")
-genes = saveGenes(record)
-sequence = record.seq
-translated_record = sequence.reverse_complement().translate(table=11)
-
-locus_tag_index = index_genbank_features(genes, "locus_tag")
-index = locus_tag_index["SSO0564"]
-
-gene = genes[index]
-
-start = gene.location.start.position-1
-end = gene.location.end.position-1
-
-print calculateNumberOfSequencedBases(start, end, cellulose_numbers)
-print calculateNumberOfSequencedBases(start, end, glukose_numbers)
+for record in vectors:
+    if len(record.seq) > 1500:
+        for feature in record.features:
+            for type in list_of_feature_types:
+                if feature.type == type:
+                    check = False
+                    if len(list_of_sequence) > 0:
+                        for sequence in list_of_sequence:
+                            if sequence.getSequence() == record.seq and sequence.getFeature_type() == feature.type and sequence.getQualifier() == feature.qualifiers.keys():
+                                sequence.incrementCount()
+                                print "Test"
+                                check = True
+                    if not check:
+                        new_sequence = SequenceRepository(record.seq, feature.type, feature.qualifiers.keys())
+                        list_of_sequence.append(new_sequence)
 
 
 
@@ -66,5 +42,8 @@ print calculateNumberOfSequencedBases(start, end, glukose_numbers)
 
 
 
-
-
+for sequence in list_of_sequence:
+    print sequence.getFeature_type()
+    print sequence.getSequence()
+    print sequence.getCount()
+    print sequence.getQualifier()
