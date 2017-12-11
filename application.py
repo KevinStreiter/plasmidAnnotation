@@ -6,7 +6,7 @@
 from Bio import SeqIO
 from SequenceRepository import *
 
-vectors = SeqIO.parse("vectors-100.gb", "genbank")
+vectors = SeqIO.parse("vectors.gb", "genbank")
 
 
 
@@ -27,9 +27,9 @@ for record in vectors:
                     check = False
                     if len(list_of_sequence) > 0:
                         for sequence in list_of_sequence:
-                            if sequence.getSequence() == record.seq and sequence.getFeature_type() == feature.type and sequence.getQualifier() == feature.qualifiers.keys():
+                            if sequence.getSequence() == record.seq and sequence.getFeature_type() == feature.type:
                                 sequence.incrementCount()
-                                print "Test"
+                                sequence.appendQualifiers(feature.qualifiers.keys())
                                 check = True
                     if not check:
                         new_sequence = SequenceRepository(record.seq, feature.type, feature.qualifiers.keys())
@@ -41,9 +41,9 @@ for record in vectors:
 
 
 
-
+count = 0
 for sequence in list_of_sequence:
-    print sequence.getFeature_type()
-    print sequence.getSequence()
-    print sequence.getCount()
-    print sequence.getQualifier()
+    if sequence.getCount() > 2:
+        print(sequence.getSequence())
+        count = count + 1
+print(count)
