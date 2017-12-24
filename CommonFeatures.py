@@ -9,11 +9,7 @@ from collections import Counter
 
 class CommonFeatures:
 
-    def __init__(self,plasmid_records):
-        self.plasmid_records = plasmid_records
-        self.extractFeatures(plasmid_records)
-    
-    def extractFeatures(self,plasmid_records):
+    def extractFeatures(self, plasmid_records):
         
         def writeCSVFile(list_of_sequence):
             file = csv.writer(open("common_features.csv", "w+"))
