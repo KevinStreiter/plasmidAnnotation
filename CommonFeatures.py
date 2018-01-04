@@ -3,7 +3,6 @@
 """
 
 from SequenceRepository import SequenceRepository
-import csv
 from collections import Counter
 from Annotator import *
 

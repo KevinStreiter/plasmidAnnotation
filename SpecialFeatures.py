@@ -1,9 +1,6 @@
 from Bio import Seq
-from Bio import SeqIO
 from Bio.Alphabet import IUPAC
 from Annotator import *
-from Bio.SeqFeature import CompoundLocation
-from Bio.SeqFeature import SeqFeature, FeatureLocation
 
 class SpecialFeatures:
     
