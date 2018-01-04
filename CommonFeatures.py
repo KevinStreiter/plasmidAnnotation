@@ -2,7 +2,7 @@
 @author: Kevin Streiter & Andreas Ott
 """
 
-from SequenceRepository import *
+from SequenceRepository import SequenceRepository
 import csv
 from collections import Counter
 

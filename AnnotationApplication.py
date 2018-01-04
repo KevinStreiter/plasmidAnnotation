@@ -4,6 +4,7 @@
 import sys
 from CommonFeatures import CommonFeatures
 from PrimerBindingSites import PrimerBindingSites
+from SpecialFeatures import SpecialFeatures
 from Bio import SeqIO
 
 
@@ -23,7 +24,11 @@ def main(argv):
     
     CommonFeatures().extractFeatures(plasmid_records)
     PrimerBindingSites().extractFeatures(plasmid_records, common_primer_records)
+    
+    annotated_records = list(SeqIO.parse('primer_binding_sites.gb', 'genbank'))
 
+    SpecialFeatures().extractFeatures(annotated_records, special_features_records)
+    
 if __name__ == "__main__":
     main(sys.argv[1:])
 
