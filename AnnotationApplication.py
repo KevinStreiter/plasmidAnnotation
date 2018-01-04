@@ -31,7 +31,7 @@ def main(argv):
     elif filename.endswith(checkSuffixGb):
         plasmid_records = list(SeqIO.parse(filename, "genbank"))
 
-    LEARNING_FILE = "InputFiles/vectors-100.gb"
+    LEARNING_FILE = "InputFiles/vectors.gb"
     vectors = SeqIO.parse(LEARNING_FILE,"genbank")
     common_primer_file = "common_primer.mfasta"
     special_features = "tags_epitopes.mfasta"
