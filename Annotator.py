@@ -9,7 +9,7 @@ from Bio import SeqIO
 class Annotator:
         @staticmethod
         def writeGeneBankFile(plasmid_records,filename):
-            output_file = open(filename, 'w')
+            output_file = open("OutputFiles/"+filename, 'w')
             for record in plasmid_records:
                 SeqIO.write(record, output_file, 'genbank')
             output_file.close()

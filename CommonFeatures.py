@@ -8,39 +8,41 @@ from collections import Counter
 from Annotator import *
 
 class CommonFeatures:
+    @staticmethod
+    def annotateSequences(plasmid_records,list_of_sequence):
+        for plasmid in plasmid_records:
+            for sequenceObject in list_of_sequence:
+                sequence = sequenceObject.getSequence()
+                doubled_plasmid = plasmid.seq + plasmid.seq
+                search = doubled_plasmid.find(sequence)
 
-    def extractFeatures(self, plasmid_records):
-        
-        def annotateSequences(list_of_sequence):
-            for plasmid in plasmid_records:
-                for sequenceObject in list_of_sequence:
-                    sequence = sequenceObject.getSequence()
-                    doubled_plasmid = plasmid.seq + plasmid.seq
-                    search = doubled_plasmid.find(sequence)
+                if search > -1:
+                    start_pos = search
+                    end_pos = start_pos + len(sequence)
+                    end_pos = Annotator().evaluateEndPosition(end_pos, plasmid,len(plasmid.seq))
+                    split_qualifier = sequenceObject.getCommonQualifier().split(":")
+                    if len(split_qualifier)>1:
+                        key = split_qualifier[0]
+                        value = split_qualifier[1]
+                        qualifier = {key: value}
+                        Annotator().appendFeatures(plasmid, start_pos, end_pos, 1, sequenceObject.getFeature_type(), qualifier, 'join')
 
-                    if search > -1:
-                        start_pos = search
-                        end_pos = start_pos + len(sequence)
-                        end_pos = Annotator().evaluateEndPosition(end_pos, plasmid,len(record))
-                        split_qualifier = sequenceObject.getCommonQualifier().split(":")
-                        if len(split_qualifier)>1:
-                            key = split_qualifier[0]
-                            value = split_qualifier[1]
-                            qualifier = {key: value}
-                            Annotator().appendFeatures(plasmid, start_pos, end_pos, 1, sequenceObject.getFeature_type(), qualifier, 'join')
+                search = doubled_plasmid.reverse_complement().find(sequence)
+                if search > -1:
+                    start_pos = search
+                    end_pos = start_pos + len(sequence)
+                    end_pos = Annotator().evaluateEndPosition(end_pos, plasmid,len(plasmid.seq))
+                    split_qualifier = sequenceObject.getCommonQualifier().split(":")
+                    if len(split_qualifier)>1:
+                        key = split_qualifier[0]
+                        value = split_qualifier[1]
+                        qualifier = {key: value}
+                        Annotator().appendFeatures(plasmid, start_pos, end_pos, -1, sequenceObject.getFeature_type(),qualifier, 'join')
+        Annotator().writeGeneBankFile(plasmid_records,"common_features.gb")
 
-                    search = doubled_plasmid.reverse_complement().find(sequence)
-                    if search > -1:
-                        start_pos = search
-                        end_pos = start_pos + len(sequence)
-                        end_pos = Annotator().evaluateEndPosition(end_pos, plasmid,len(record))
-                        split_qualifier = sequenceObject.getCommonQualifier().split(":")
-                        if len(split_qualifier)>1:
-                            key = split_qualifier[0]
-                            value = split_qualifier[1]
-                            qualifier = {key: value}
-                            Annotator().appendFeatures(plasmid, start_pos, end_pos, -1, sequenceObject.getFeature_type(),qualifier, 'join')
-            Annotator().writeGeneBankFile(plasmid_records,"common_features.gb")
+    @staticmethod
+    def extractFeatures(plasmid_records):
+
         list_of_sequence = []
 
         list_of_feature_types = ['promoter', 'oriT', 'rep_origin', 'primer_bind', 'terminator', 'misc_signal','misc_recomb','LTR', 'enhancer', '-35_signal', '-10_signal', 'RBS', 'polyA_signal', 'sig_peptide', 'CDS','protein_bind', 'misc_binding', 'mobile_element', 'mRNA', 'tRNA', 'rRNA']
@@ -132,4 +134,4 @@ class CommonFeatures:
                     common_qualifier,num_most_qualifier = Counter(sequence.getQualifierValues()).most_common(1)[0]
                     sequence.setCommonQualifier(common_qualifier)
             
-        annotateSequences(list_of_sequence)
+        return list_of_sequence

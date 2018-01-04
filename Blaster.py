@@ -48,3 +48,4 @@ class Blaster:
             Blaster().execute(1,plasmid.reverse_complement(),-1)
             Blaster().execute(2,plasmid,1)
             Blaster().execute(2,plasmid.reverse_complement(),-1)
+        Annotator().writeGeneBankFile(plasmid_list, "final_annotated_plasmid.gb")
