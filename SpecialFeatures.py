@@ -1,34 +1,13 @@
 from Bio import Seq
 from Bio import SeqIO
 from Bio.Alphabet import IUPAC
+from Annotator import *
 from Bio.SeqFeature import CompoundLocation
 from Bio.SeqFeature import SeqFeature, FeatureLocation
 
 class SpecialFeatures:
     
     def extractFeatures(self, records, special_features):
-        
-        
-        def writeGeneBankFile(plasmid_records):
-            output_file = open('special_translated_features.gb', 'w')
-            for record in plasmid_records:
-                SeqIO.write(record, output_file, 'genbank')
-            output_file.close()
-            print("---------File:" + " special_translated_features.gb " + "created---------")
-
-        def evaluateEndPosition(end_position, record, record_length):
-            if end_position > record_length - 1:
-                end_position = end_position - record_length
-                return end_position
-            return end_position
-        
-        def appendFeatures(plasmid_object, start, end, strand, type, qualifier, location_operator):
-            if start > end:
-                plasmid_object.features.append(SeqFeature(CompoundLocation([FeatureLocation(start, len(plasmid_object.seq)), FeatureLocation(0, end)]),
-                                                  type=type, strand=strand,qualifiers=qualifier, location_operator=location_operator))
-            else:
-                plasmid_object.features.append(SeqFeature(FeatureLocation(start, end), type=type,
-                                                  strand=strand,qualifiers=qualifier))   
 
         for record in records:
 
@@ -68,10 +47,10 @@ class SpecialFeatures:
                     if search > -1:
                         start_position = search*3
                         end_position = start_position + len(epitope.seq) * 3
-                        end_position = evaluateEndPosition(end_position, protein_strand, len(protein_strand))
+                        end_position = Annotator().evaluateEndPosition(end_position, protein_strand, len(protein_strand))
                         print ("Found --> ", epitope.id)
                         qualifier = {"note": epitope.id}
-                        appendFeatures(record, start_position, end_position, 1, "misc_feature", qualifier, 'join')
+                        Annotator().appendFeatures(record, start_position, end_position, 1, "misc_feature", qualifier, 'join')
                     
 
-        writeGeneBankFile(records)
+        Annotator().writeGeneBankFile(records,"special_translated_features.gb")
