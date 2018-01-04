@@ -50,10 +50,16 @@ class PrimerBindingSites:
         backward_strand = -1
         
         list_of_sequence = []
-        
+        longest_primer_site = 0
+        for site in primer_binding_sites:
+            if len(site.seq)>longest_primer_site:
+                longest_primer_site = len(site.seq)
+
         for record in plasmid_records:
+            #Seq appended to check for Sites over "0"
+            plasmid_seq_to_check = record.seq + record.seq[:longest_primer_site]
             for site in primer_binding_sites:
-                search = record.seq.find(site.seq[-15:])
+                search = plasmid_seq_to_check.find(site.seq[-15:])
                 if search > -1:
                     start_position = search
                     end_position = start_position + 15
@@ -63,7 +69,7 @@ class PrimerBindingSites:
                     qualifier = {"note": site.id}
                     appendFeatures(record, start_position, end_position, forward_strand, "primer_bind", qualifier, 'join')
 
-                search = record.seq.reverse_complement().find(site.seq[-15:])
+                search = plasmid_seq_to_check.reverse_complement().find(site.seq[-15:])
                 if search > -1:
                     start_position = search
                     end_position = start_position + 15
@@ -72,46 +78,6 @@ class PrimerBindingSites:
                     list_of_sequence.append(new_sequence)
                     qualifier = {"note": site.id}
                     appendFeatures(record, start_position, end_position, backward_strand, "primer_bind", qualifier, 'join')
-
-
-            firststrand_firstframe = ""
-            firststrand_secondframe = ""
-            firststrand_thirdframe = ""
-            secondstrand_firstframe = ""
-            secondstrand_secondframe = ""
-            secondstrand_thirdframe = ""
-            record.alphabet = IUPAC
-
-            for i in range(0, len(record.seq), 3):
-                translated_plasmid = Seq.translate(record.seq[i:i + 3])
-                firststrand_firstframe += (str(translated_plasmid))
-                translated_reversed_plasmid = Seq.translate(str(record.seq.reverse_complement()[i:i + 3]))
-                secondstrand_firstframe += translated_reversed_plasmid
-            for i in range(1, len(record.seq), 3):
-                translated_plasmid = Seq.translate(record.seq[i:i + 3])
-                firststrand_secondframe += (translated_plasmid)
-                translated_reversed_plasmid = Seq.translate(str(record.seq.reverse_complement()[i:i + 3]))
-                secondstrand_secondframe += translated_reversed_plasmid
-            for i in range(2, len(record.seq), 3):
-                translated_plasmid = Seq.translate(record.seq[i:i + 3])
-                firststrand_thirdframe += (translated_plasmid)
-                translated_reversed_plasmid = Seq.translate(str(record.seq.reverse_complement()[i:i + 3]))
-                secondstrand_thirdframe += translated_reversed_plasmid
-
-            protein_strands = [Seq.Seq(str(firststrand_firstframe)), Seq.Seq(str(firststrand_secondframe)),
-                               Seq.Seq(str(firststrand_thirdframe)), Seq.Seq(str(secondstrand_firstframe)),
-                               Seq.Seq(str(secondstrand_secondframe)), Seq.Seq(str(secondstrand_thirdframe))]
-            for protein_strand in protein_strands:
-                for epitope in special_features:
-                    doubled_protein_strand = protein_strand + protein_strand
-                    search = doubled_protein_strand.find(epitope.seq)
-                    if search > -1:
-                        start_position = search*3
-                        end_position = start_position + len(epitope.seq) * 3
-                        end_position = evaluateEndPosition(end_position, protein_strand, len(protein_strand))
-                        print "Found --> ", epitope.id
-                        qualifier = {"note": epitope.id}
-                        appendFeatures(record, start_position, end_position, 1, "misc_feature", qualifier, 'join')
 
         writeCSVFile(list_of_sequence)
         writeGeneBankFile(plasmid_records)

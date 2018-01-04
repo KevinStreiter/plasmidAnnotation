@@ -67,7 +67,7 @@ class SpecialFeatures:
                         start_position = search*3
                         end_position = start_position + len(epitope.seq) * 3
                         end_position = evaluateEndPosition(end_position, protein_strand, len(protein_strand))
-                        print "Found --> ", epitope.id
+                        print ("Found --> ", epitope.id)
                         qualifier = {"note": epitope.id}
                         appendFeatures(record, start_position, end_position, 1, "misc_feature", qualifier, 'join')
                     
