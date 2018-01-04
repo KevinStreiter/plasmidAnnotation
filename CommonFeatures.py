@@ -22,9 +22,10 @@ class CommonFeatures:
                         start_pos = search
                         end_pos = start_pos + len(sequence)
                         end_pos = Annotator().evaluateEndPosition(end_pos, plasmid,len(record))
-                        if(sequenceObject.getCommonQualifier()!=""):
-                            key = sequenceObject.getCommonQualifier().split(':')[0]
-                            value = sequenceObject.getCommonQualifier().split(':')[1]
+                        split_qualifier = sequenceObject.getCommonQualifier().split(":")
+                        if len(split_qualifier)>1:
+                            key = split_qualifier[0]
+                            value = split_qualifier[1]
                             qualifier = {key: value}
                             Annotator().appendFeatures(plasmid, start_pos, end_pos, 1, sequenceObject.getFeature_type(), qualifier, 'join')
 
@@ -33,9 +34,10 @@ class CommonFeatures:
                         start_pos = search
                         end_pos = start_pos + len(sequence)
                         end_pos = Annotator().evaluateEndPosition(end_pos, plasmid,len(record))
-                        if(sequenceObject.getCommonQualifier()!=""):
-                            key = sequenceObject.getCommonQualifier().split(':')[0]
-                            value = sequenceObject.getCommonQualifier().split(':')[1]
+                        split_qualifier = sequenceObject.getCommonQualifier().split(":")
+                        if len(split_qualifier)>1:
+                            key = split_qualifier[0]
+                            value = split_qualifier[1]
                             qualifier = {key: value}
                             Annotator().appendFeatures(plasmid, start_pos, end_pos, -1, sequenceObject.getFeature_type(),qualifier, 'join')
             Annotator().writeGeneBankFile(plasmid_records,"common_features.gb")
@@ -124,8 +126,10 @@ class CommonFeatures:
                         gene_list.append(sequence)
                     else:
                         undefined_qualifier_list.append(sequence)
-               
-                common_qualifier,num_most_qualifier = Counter(sequence.getQualifierValues()).most_common(1)[0]
-                sequence.setCommonQualifier(common_qualifier)
+                if(len(sequence.getQualifierValues()) > 0):
+                    #for values in sequence.getQualifierValues():
+                    #    print(values)
+                    common_qualifier,num_most_qualifier = Counter(sequence.getQualifierValues()).most_common(1)[0]
+                    sequence.setCommonQualifier(common_qualifier)
             
         annotateSequences(list_of_sequence)
