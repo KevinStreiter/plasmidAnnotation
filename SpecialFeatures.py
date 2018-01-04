@@ -39,30 +39,32 @@ class SpecialFeatures:
             secondstrand_secondframe = ""
             secondstrand_thirdframe = ""
             record.alphabet = IUPAC
-    
-            for i in range(0, len(record.seq), 3):
-                translated_plasmid = Seq.translate(record.seq[i:i + 3])
-                firststrand_firstframe += (str(translated_plasmid))
-                translated_reversed_plasmid = Seq.translate(str(record.seq.reverse_complement()[i:i + 3]))
-                secondstrand_firstframe += translated_reversed_plasmid
-            for i in range(1, len(record.seq), 3):
-                translated_plasmid = Seq.translate(record.seq[i:i + 3])
-                firststrand_secondframe += (translated_plasmid)
-                translated_reversed_plasmid = Seq.translate(str(record.seq.reverse_complement()[i:i + 3]))
-                secondstrand_secondframe += translated_reversed_plasmid
-            for i in range(2, len(record.seq), 3):
-                translated_plasmid = Seq.translate(record.seq[i:i + 3])
-                firststrand_thirdframe += (translated_plasmid)
-                translated_reversed_plasmid = Seq.translate(str(record.seq.reverse_complement()[i:i + 3]))
-                secondstrand_thirdframe += translated_reversed_plasmid
+            seq_len = len(record.seq)
+            for i in range(0, seq_len, 3):
+                if i+3<=seq_len:
+                    translated_plasmid = Seq.translate(record.seq[i:i + 3])
+                    firststrand_firstframe += (str(translated_plasmid))
+                    translated_reversed_plasmid = Seq.translate(str(record.seq.reverse_complement()[i:i + 3]))
+                    secondstrand_firstframe += translated_reversed_plasmid
+                if i+4<=seq_len:
+                    translated_plasmid = Seq.translate(record.seq[i+1:i + 4])
+                    firststrand_secondframe += (translated_plasmid)
+                    translated_reversed_plasmid = Seq.translate(str(record.seq.reverse_complement()[i+1:i + 4]))
+                    secondstrand_secondframe += translated_reversed_plasmid
+                if i+5<=seq_len:
+                    translated_plasmid = Seq.translate(record.seq[i+2:i + 5])
+                    firststrand_thirdframe += (translated_plasmid)
+                    translated_reversed_plasmid = Seq.translate(str(record.seq.reverse_complement()[i+2:i + 5]))
+                    secondstrand_thirdframe += translated_reversed_plasmid
 
             protein_strands = [Seq.Seq(str(firststrand_firstframe)), Seq.Seq(str(firststrand_secondframe)),
                                Seq.Seq(str(firststrand_thirdframe)), Seq.Seq(str(secondstrand_firstframe)),
                                Seq.Seq(str(secondstrand_secondframe)), Seq.Seq(str(secondstrand_thirdframe))]
+
             for protein_strand in protein_strands:
                 for epitope in special_features:
-                    doubled_protein_strand = protein_strand + protein_strand
-                    search = doubled_protein_strand.find(epitope.seq)
+                    protein_strand_to_check = protein_strand + protein_strand[:3]
+                    search = protein_strand_to_check.find(epitope.seq)
                     if search > -1:
                         start_position = search*3
                         end_position = start_position + len(epitope.seq) * 3
