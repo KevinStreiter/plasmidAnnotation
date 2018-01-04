@@ -54,6 +54,14 @@ FEATURES             Location/Qualifiers
                      /note="synthetic poly(A) signal/transcriptional pause site"
      misc_feature    3766..3785
                      /note="reporter vector primer 3 (RVprimer3) binding region"
+     polyA_signal    1362..1583
+                     /note="SV40 late poly(A) signal"
+     rep_origin      1
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     CDS             complement(259..1119)
+                     /product="beta-lactamase"
      primer_bind     3327..3341
                      /note="Amp.rev"
      primer_bind     complement(2451..2465)
@@ -188,6 +196,14 @@ FEATURES             Location/Qualifiers
                      /note="poly(A) signal/transcriptional pause site"
      misc_feature    3528..3547
                      /note="reporter vector primer 3 (RVprimer3) binding region"
+     polyA_signal    1124..1345
+                     /note="SV40 late poly(A) signal"
+     rep_origin      1
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     CDS             complement(259..1119)
+                     /product="beta-lactamase"
      primer_bind     3089..3103
                      /note="Amp.rev"
      primer_bind     complement(2451..2465)
@@ -325,6 +341,14 @@ FEATURES             Location/Qualifiers
                      /note="poly(A) signal/transcriptional pause site"
      misc_feature    4903..4922
                      /note="reporter vector primer 3 (RVprimer3) binding region"
+     polyA_signal    2499..2720
+                     /note="SV40 late poly(A) signal"
+     rep_origin      1
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     CDS             complement(259..1119)
+                     /product="beta-lactamase"
      primer_bind     4464..4478
                      /note="Amp.rev"
      primer_bind     complement(2451..2465)
@@ -485,6 +509,14 @@ FEATURES             Location/Qualifiers
                      /note="poly(A) signal/transcriptional pause site"
      misc_feature    4665..4684
                      /note="reporter vector primer 3 (RVprimer3) binding region"
+     polyA_signal    2261..2482
+                     /note="SV40 late poly(A) signal"
+     rep_origin      1
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     CDS             complement(259..1119)
+                     /product="beta-lactamase"
      primer_bind     4226..4240
                      /note="Amp.rev"
      primer_bind     complement(2451..2465)
@@ -674,6 +706,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AGR55436.1"
      terminator      6834..6938
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      3267..3369
+                     /note="T0"
+     CDS             join(3497..6939,1..892)
+                     /product="neomycin phosphotransferase"
+     CDS             complement(1144..2292)
+                     /product="replication protein"
+     terminator      join(6834..6939,1..3518)
+                     /note="T1"
+     primer_bind     complement(join(1..3378,6775..6939))
+                     /note="F24"
      primer_bind     complement(6618..6632)
                      /note="LacZ.rev"
      primer_bind     complement(6833..6847)
@@ -985,6 +1033,36 @@ FEATURES             Location/Qualifiers
                      /note="PlacUV5"
      terminator      10950..11054
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      join(5931..11055,1..2613)
+                     /note="T0"
+     CDS             join(6161..11055,1..3556)
+                     /product="neomycin phosphotransferase"
+     terminator      join(10950..11055,1..7634)
+                     /note="T1"
+     CDS             127..1569
+                     /product="LuxC"
+     CDS             1581..2504
+                     /product="LuxD"
+     CDS             join(2553..11055,1..215)
+                     /product="LuxA"
+     CDS             join(3650..11055,1..1213)
+                     /product="LuxB"
+     CDS             join(4812..11055,1..2504)
+                     /product="LuxE"
+     CDS             complement(join(1..374,2844..11055))
+                     /product="replication protein"
+     CDS             complement(2117..2956)
+                     /product="replication protein"
+     CDS             complement(635..1606)
+                     /product="replication protein"
+     promoter        complement(581..610)
+                     /note="PlacUV5"
      primer_bind     17..31
                      /note="M13/pUC.rev"
      primer_bind     complement(4921..4935)
@@ -1260,6 +1338,24 @@ FEATURES             Location/Qualifiers
                      /protein_id="AGR55421.1"
      terminator      4821..4925
                      /note="T1"
+     rep_origin      11
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     terminator      2109..2211
+                     /note="T0"
+     terminator      join(4821..4926,1..1505)
+                     /note="T1"
+     CDS             complement(join(1..1488,3943..4926))
+                     /product="XylS"
+     promoter        1925..1977
+                     /note="Pm"
+     primer_bind     complement(2825..2848)
+                     /note="F24"
+     CDS             2358..3017
+                     /product="chloramphenicol acetyltransferase"
+     CDS             complement(980..1642)
+                     /product="replication protein"
      primer_bind     complement(2518..2532)
                      /note="CAT.rev"
      primer_bind     complement(2863..2877)
@@ -1432,6 +1528,24 @@ FEATURES             Location/Qualifiers
                      /protein_id="AGR55418.1"
      terminator      4976..5080
                      /note="T1"
+     rep_origin      11
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     terminator      2109..2211
+                     /note="T0"
+     CDS             2339..3154
+                     /product="neomycin phosphotransferase"
+     terminator      join(4976..5081,1..1660)
+                     /note="T1"
+     CDS             complement(join(1..1643,4098..5081))
+                     /product="XylS"
+     promoter        1925..1977
+                     /note="Pm"
+     primer_bind     complement(2980..3003)
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
      primer_bind     complement(3018..3032)
                      /note="M13(-40)"
      primer_bind     complement(2769..2783)
@@ -1608,6 +1722,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV60005.1"
      terminator      4158..4262
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      844..946
+                     /note="T0"
+     CDS             1074..1889
+                     /product="neomycin phosphotransferase"
+     terminator      join(4158..4263,1..842)
+                     /note="T1"
+     CDS             127..837
+                     /product="mCherry"
+     CDS             complement(522..1364)
+                     /product="replication protein"
      primer_bind     743..757
                      /note="DsRed1-C"
      primer_bind     17..31
@@ -1780,6 +1910,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV60002.1"
      terminator      3711..3815
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      844..946
+                     /note="T0"
+     CDS             1074..1889
+                     /product="neomycin phosphotransferase"
+     terminator      join(3711..3816,1..395)
+                     /note="T1"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             127..837
+                     /product="mCherry"
      primer_bind     743..757
                      /note="DsRed1-C"
      primer_bind     17..31
@@ -1945,6 +2091,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59999.1"
      terminator      4411..4515
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      844..946
+                     /note="T0"
+     CDS             1074..1889
+                     /product="neomycin phosphotransferase"
+     CDS             complement(1144..2292)
+                     /product="replication protein"
+     terminator      join(4411..4516,1..1095)
+                     /note="T1"
+     CDS             127..837
+                     /product="mCherry"
      primer_bind     743..757
                      /note="DsRed1-C"
      primer_bind     17..31
@@ -2120,6 +2282,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59996.1"
      terminator      4125..4229
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      811..913
+                     /note="T0"
+     CDS             1041..1856
+                     /product="neomycin phosphotransferase"
+     terminator      join(4125..4230,1..809)
+                     /note="T1"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             127..804
+                     /product="DsRed2"
      primer_bind     728..742
                      /note="DsRed1-C"
      primer_bind     complement(3939..3953)
@@ -2289,6 +2467,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59993.1"
      terminator      3678..3782
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      811..913
+                     /note="T0"
+     CDS             1041..1856
+                     /product="neomycin phosphotransferase"
+     terminator      join(3678..3783,1..362)
+                     /note="T1"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             127..804
+                     /product="DsRed2"
      primer_bind     728..742
                      /note="DsRed1-C"
      primer_bind     complement(3492..3506)
@@ -2452,6 +2646,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59990.1"
      terminator      4378..4482
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      811..913
+                     /note="T0"
+     CDS             1041..1856
+                     /product="neomycin phosphotransferase"
+     CDS             complement(1144..2292)
+                     /product="replication protein"
+     terminator      join(4378..4483,1..1062)
+                     /note="T1"
+     CDS             127..804
+                     /product="DsRed2"
      primer_bind     728..742
                      /note="DsRed1-C"
      primer_bind     complement(4192..4206)
@@ -2624,6 +2834,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59987.1"
      terminator      4167..4271
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      853..955
+                     /note="T0"
+     CDS             1083..1898
+                     /product="neomycin phosphotransferase"
+     terminator      join(4167..4272,1..851)
+                     /note="T1"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             127..846
+                     /product="CFP"
      primer_bind     787..801
                      /note="EGFP-C"
      primer_bind     complement(4116..4130)
@@ -2796,6 +3022,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59984.1"
      terminator      3720..3824
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      853..955
+                     /note="T0"
+     CDS             1083..1898
+                     /product="neomycin phosphotransferase"
+     terminator      join(3720..3825,1..404)
+                     /note="T1"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             127..846
+                     /product="CFP"
      primer_bind     787..801
                      /note="EGFP-C"
      primer_bind     complement(3669..3683)
@@ -2961,6 +3203,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59981.1"
      terminator      4420..4524
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      853..955
+                     /note="T0"
+     CDS             1083..1898
+                     /product="neomycin phosphotransferase"
+     CDS             complement(1144..2292)
+                     /product="replication protein"
+     terminator      join(4420..4525,1..1104)
+                     /note="T1"
+     CDS             127..846
+                     /product="CFP"
      primer_bind     787..801
                      /note="EGFP-C"
      primer_bind     complement(4369..4383)
@@ -3136,6 +3394,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59978.1"
      terminator      4167..4271
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      853..955
+                     /note="T0"
+     CDS             1083..1898
+                     /product="neomycin phosphotransferase"
+     terminator      join(4167..4272,1..851)
+                     /note="T1"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             127..846
+                     /product="YFP"
      primer_bind     787..801
                      /note="EGFP-C"
      primer_bind     complement(4116..4130)
@@ -3308,6 +3582,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59975.1"
      terminator      3720..3824
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      853..955
+                     /note="T0"
+     CDS             1083..1898
+                     /product="neomycin phosphotransferase"
+     terminator      join(3720..3825,1..404)
+                     /note="T1"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             127..846
+                     /product="YFP"
      primer_bind     787..801
                      /note="EGFP-C"
      primer_bind     complement(3669..3683)
@@ -3473,6 +3763,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59972.1"
      terminator      4420..4524
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      853..955
+                     /note="T0"
+     CDS             1083..1898
+                     /product="neomycin phosphotransferase"
+     CDS             complement(1144..2292)
+                     /product="replication protein"
+     terminator      join(4420..4525,1..1104)
+                     /note="T1"
+     CDS             127..846
+                     /product="YFP"
      primer_bind     787..801
                      /note="EGFP-C"
      primer_bind     complement(4369..4383)
@@ -3714,6 +4020,30 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59969.1"
      terminator      9245..9349
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      join(5931..9350,1..2613)
+                     /note="T0"
+     CDS             join(6161..9350,1..3556)
+                     /product="neomycin phosphotransferase"
+     terminator      join(9245..9350,1..5929)
+                     /note="T1"
+     CDS             127..1569
+                     /product="LuxC"
+     CDS             1581..2504
+                     /product="LuxD"
+     CDS             join(2553..9350,1..215)
+                     /product="LuxA"
+     CDS             join(3650..9350,1..1213)
+                     /product="LuxB"
+     CDS             join(4812..9350,1..2504)
+                     /product="LuxE"
+     CDS             complement(522..1364)
+                     /product="replication protein"
      primer_bind     17..31
                      /note="M13/pUC.rev"
      primer_bind     7839..7853
@@ -4030,6 +4360,30 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59962.1"
      terminator      8798..8902
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      join(5931..8903,1..2613)
+                     /note="T0"
+     CDS             join(6161..8903,1..3556)
+                     /product="neomycin phosphotransferase"
+     terminator      join(8798..8903,1..5482)
+                     /note="T1"
+     CDS             127..1569
+                     /product="LuxC"
+     CDS             1581..2504
+                     /product="LuxD"
+     CDS             join(2553..8903,1..215)
+                     /product="LuxA"
+     CDS             join(3650..8903,1..1213)
+                     /product="LuxB"
+     CDS             join(4812..8903,1..2504)
+                     /product="LuxE"
+     CDS             complement(980..1642)
+                     /product="replication protein"
      primer_bind     17..31
                      /note="M13/pUC.rev"
      primer_bind     complement(2769..2783)
@@ -4340,6 +4694,30 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59955.1"
      terminator      9498..9602
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      join(5931..9603,1..2613)
+                     /note="T0"
+     CDS             join(6161..9603,1..3556)
+                     /product="neomycin phosphotransferase"
+     CDS             complement(1144..2292)
+                     /product="replication protein"
+     terminator      join(9498..9603,1..6182)
+                     /note="T1"
+     CDS             127..1569
+                     /product="LuxC"
+     CDS             1581..2504
+                     /product="LuxD"
+     CDS             join(2553..9603,1..215)
+                     /product="LuxA"
+     CDS             join(3650..9603,1..1213)
+                     /product="LuxB"
+     CDS             join(4812..9603,1..2504)
+                     /product="LuxE"
      primer_bind     17..31
                      /note="M13/pUC.rev"
      primer_bind     complement(3469..3483)
@@ -4609,6 +4987,24 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59948.1"
      terminator      6606..6710
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      3292..3394
+                     /note="T0"
+     CDS             join(3522..6711,1..917)
+                     /product="neomycin phosphotransferase"
+     terminator      join(6606..6711,1..3290)
+                     /note="T1"
+     primer_bind     complement(join(1..3125,6522..6711))
+                     /note="F24"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             127..3201
+                     /product="LacZ"
      primer_bind     complement(6365..6379)
                      /note="LacZ.rev"
      primer_bind     complement(6580..6594)
@@ -4838,6 +5234,24 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59945.1"
      terminator      6159..6263
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      3292..3394
+                     /note="T0"
+     CDS             join(3522..6264,1..917)
+                     /product="neomycin phosphotransferase"
+     terminator      join(6159..6264,1..2843)
+                     /note="T1"
+     primer_bind     complement(join(1..2678,6075..6264))
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             127..3201
+                     /product="LacZ"
      primer_bind     complement(5918..5932)
                      /note="LacZ.rev"
      primer_bind     complement(6133..6147)
@@ -5061,6 +5475,24 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59942.1"
      terminator      6859..6963
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      3292..3394
+                     /note="T0"
+     CDS             join(3522..6964,1..917)
+                     /product="neomycin phosphotransferase"
+     CDS             complement(1144..2292)
+                     /product="replication protein"
+     terminator      join(6859..6964,1..3543)
+                     /note="T1"
+     primer_bind     complement(join(1..3378,6775..6964))
+                     /note="F24"
+     CDS             127..3201
+                     /product="LacZ"
      primer_bind     complement(6618..6632)
                      /note="LacZ.rev"
      primer_bind     complement(6833..6847)
@@ -5283,6 +5715,24 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59930.1"
      terminator      5521..5625
                      /note="T1"
+     rep_origin      11
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     terminator      2109..2211
+                     /note="T0"
+     CDS             complement(1144..2292)
+                     /product="replication protein"
+     terminator      join(5521..5626,1..2205)
+                     /note="T1"
+     CDS             complement(join(1..2188,4643..5626))
+                     /product="XylS"
+     promoter        1925..1977
+                     /note="Pm"
+     primer_bind     complement(join(1..128,3525..5626))
+                     /note="F24"
+     CDS             2358..3017
+                     /product="chloramphenicol acetyltransferase"
      primer_bind     complement(3218..3232)
                      /note="CAT.rev"
      primer_bind     complement(3563..3577)
@@ -5473,6 +5923,24 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59927.1"
      terminator      5676..5780
                      /note="T1"
+     rep_origin      11
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     terminator      2109..2211
+                     /note="T0"
+     CDS             2339..3154
+                     /product="neomycin phosphotransferase"
+     CDS             complement(1144..2292)
+                     /product="replication protein"
+     terminator      join(5676..5781,1..2360)
+                     /note="T1"
+     CDS             complement(join(1..2343,4798..5781))
+                     /product="XylS"
+     promoter        1925..1977
+                     /note="Pm"
+     primer_bind     complement(join(1..283,3680..5781))
+                     /note="F24"
      primer_bind     complement(3718..3732)
                      /note="M13(-40)"
      primer_bind     complement(3469..3483)
@@ -5660,6 +6128,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59897.1"
      terminator      3792..3896
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      join(3792..3897,1..476)
+                     /note="T1"
+     primer_bind     complement(join(1..149,3546..3897))
+                     /note="F24"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     CDS             946..1479
+                     /product="gentamicin-3-acetyltransferase"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(3604..3618)
                      /note="M13(-21).for"
      primer_bind     complement(3584..3598)
@@ -5827,6 +6315,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59894.1"
      terminator      3792..3896
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      join(3792..3897,1..476)
+                     /note="T1"
+     primer_bind     complement(join(1..149,3546..3897))
+                     /note="F24"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             946..1479
+                     /product="gentamicin-3-acetyltransferase"
+     CDS             235..558
+                     /product="LacZa"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(3604..3618)
                      /note="M13(-21).for"
      primer_bind     complement(3584..3598)
@@ -5993,6 +6501,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59891.1"
      terminator      3345..3449
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      join(3345..3450,1..29)
+                     /note="T1"
+     primer_bind     complement(3099..3122)
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     CDS             946..1479
+                     /product="gentamicin-3-acetyltransferase"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(3157..3171)
                      /note="M13(-21).for"
      primer_bind     complement(3137..3151)
@@ -6150,6 +6678,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59888.1"
      terminator      3345..3449
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      join(3345..3450,1..29)
+                     /note="T1"
+     primer_bind     complement(3099..3122)
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             946..1479
+                     /product="gentamicin-3-acetyltransferase"
+     CDS             235..558
+                     /product="LacZa"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(3157..3171)
                      /note="M13(-21).for"
      primer_bind     complement(3137..3151)
@@ -6311,6 +6859,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59885.1"
      terminator      4251..4355
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      join(4251..4356,1..935)
+                     /note="T1"
+     primer_bind     complement(join(1..608,4005..4356))
+                     /note="F24"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     CDS             885..2003
+                     /product="tetracycline efflux transporter"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(4063..4077)
                      /note="M13(-21).for"
      primer_bind     complement(4043..4057)
@@ -6493,6 +7061,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59882.1"
      terminator      4251..4355
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      join(4251..4356,1..935)
+                     /note="T1"
+     primer_bind     complement(join(1..608,4005..4356))
+                     /note="F24"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     CDS             885..2003
+                     /product="tetracycline efflux transporter"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(4063..4077)
                      /note="M13(-21).for"
      primer_bind     complement(4043..4057)
@@ -6674,6 +7262,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59879.1"
      terminator      3804..3908
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      join(3804..3909,1..488)
+                     /note="T1"
+     primer_bind     complement(join(1..161,3558..3909))
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     CDS             885..2003
+                     /product="tetracycline efflux transporter"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(3616..3630)
                      /note="M13(-21).for"
      primer_bind     complement(3596..3610)
@@ -6846,6 +7454,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59876.1"
      terminator      3804..3908
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      join(3804..3909,1..488)
+                     /note="T1"
+     primer_bind     complement(join(1..161,3558..3909))
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     CDS             885..2003
+                     /product="tetracycline efflux transporter"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(3616..3630)
                      /note="M13(-21).for"
      primer_bind     complement(3596..3610)
@@ -7016,6 +7644,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59861.1"
      terminator      3759..3863
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      join(3759..3864,1..443)
+                     /note="T1"
+     primer_bind     complement(join(1..116,3513..3864))
+                     /note="F24"
+     CDS             849..1508
+                     /product="chloramphenicol acetyltransferase"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(2965..2979)
                      /note="CAT.rev"
      primer_bind     complement(3571..3585)
@@ -7185,6 +7833,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59858.1"
      terminator      3759..3863
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      join(3759..3864,1..443)
+                     /note="T1"
+     primer_bind     complement(join(1..116,3513..3864))
+                     /note="F24"
+     CDS             849..1508
+                     /product="chloramphenicol acetyltransferase"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(2965..2979)
                      /note="CAT.rev"
      primer_bind     complement(3571..3585)
@@ -7353,6 +8021,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59855.1"
      terminator      3312..3416
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      3312..3416
+                     /note="T1"
+     primer_bind     complement(3066..3089)
+                     /note="F24"
+     CDS             849..1508
+                     /product="chloramphenicol acetyltransferase"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(2518..2532)
                      /note="CAT.rev"
      primer_bind     complement(3124..3138)
@@ -7511,6 +8199,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59852.1"
      terminator      3312..3416
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      3312..3416
+                     /note="T1"
+     primer_bind     complement(3066..3089)
+                     /note="F24"
+     CDS             849..1508
+                     /product="chloramphenicol acetyltransferase"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(2518..2532)
                      /note="CAT.rev"
      primer_bind     complement(3124..3138)
@@ -7671,6 +8379,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59849.1"
      terminator      3914..4018
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     CDS             830..1645
+                     /product="neomycin phosphotransferase"
+     terminator      join(3914..4019,1..598)
+                     /note="T1"
+     primer_bind     complement(join(1..271,3668..4019))
+                     /note="F24"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(3726..3740)
                      /note="M13(-21).for"
      primer_bind     complement(3706..3720)
@@ -7843,6 +8571,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59846.1"
      terminator      3914..4018
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     CDS             830..1645
+                     /product="neomycin phosphotransferase"
+     terminator      join(3914..4019,1..598)
+                     /note="T1"
+     primer_bind     complement(join(1..271,3668..4019))
+                     /note="F24"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(3726..3740)
                      /note="M13(-21).for"
      primer_bind     complement(3706..3720)
@@ -8014,6 +8762,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59843.1"
      terminator      3467..3571
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     CDS             830..1645
+                     /product="neomycin phosphotransferase"
+     terminator      join(3467..3572,1..151)
+                     /note="T1"
+     primer_bind     complement(3221..3244)
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(3279..3293)
                      /note="M13(-21).for"
      primer_bind     complement(3259..3273)
@@ -8176,6 +8944,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59840.1"
      terminator      3467..3571
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     CDS             830..1645
+                     /product="neomycin phosphotransferase"
+     terminator      join(3467..3572,1..151)
+                     /note="T1"
+     primer_bind     complement(3221..3244)
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(3279..3293)
                      /note="M13(-21).for"
      primer_bind     complement(3259..3273)
@@ -8340,6 +9128,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59837.1"
      terminator      4015..4119
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      join(4015..4120,1..699)
+                     /note="T1"
+     primer_bind     complement(join(1..372,3769..4120))
+                     /note="F24"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     CDS             863..1723
+                     /product="beta-lactamase"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(3827..3841)
                      /note="M13(-21).for"
      primer_bind     complement(3807..3821)
@@ -8513,6 +9321,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59834.1"
      terminator      4015..4119
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      join(4015..4120,1..699)
+                     /note="T1"
+     primer_bind     complement(join(1..372,3769..4120))
+                     /note="F24"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     CDS             863..1723
+                     /product="beta-lactamase"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(3827..3841)
                      /note="M13(-21).for"
      primer_bind     complement(3807..3821)
@@ -8685,6 +9513,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59831.1"
      terminator      3568..3672
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      join(3568..3673,1..252)
+                     /note="T1"
+     primer_bind     complement(3322..3345)
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     CDS             863..1723
+                     /product="beta-lactamase"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(3380..3394)
                      /note="M13(-21).for"
      primer_bind     complement(3360..3374)
@@ -8848,6 +9696,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59828.1"
      terminator      3568..3672
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      join(3568..3673,1..252)
+                     /note="T1"
+     primer_bind     complement(3322..3345)
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     CDS             863..1723
+                     /product="beta-lactamase"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(3380..3394)
                      /note="M13(-21).for"
      primer_bind     complement(3360..3374)
@@ -9030,6 +9898,28 @@ FEATURES             Location/Qualifiers
                      /note="PlacUV5"
      terminator      5048..5152
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     terminator      join(5048..5153,1..1732)
+                     /note="T1"
+     CDS             complement(join(1..374,2844..5153))
+                     /product="replication protein"
+     CDS             complement(2117..2956)
+                     /product="replication protein"
+     CDS             complement(635..1606)
+                     /product="replication protein"
+     promoter        complement(581..610)
+                     /note="PlacUV5"
+     primer_bind     complement(join(1..1613,5010..5153))
+                     /note="F24"
+     CDS             497..1030
+                     /product="gentamicin-3-acetyltransferase"
      primer_bind     complement(5048..5062)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -9196,6 +10086,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59821.1"
      terminator      3343..3447
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     terminator      join(3343..3448,1..27)
+                     /note="T1"
+     primer_bind     complement(3305..3328)
+                     /note="F24"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             497..1030
+                     /product="gentamicin-3-acetyltransferase"
      primer_bind     complement(3343..3357)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -9335,6 +10241,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59819.1"
      terminator      2896..3000
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     terminator      2896..3000
+                     /note="T1"
+     primer_bind     complement(2858..2881)
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             497..1030
+                     /product="gentamicin-3-acetyltransferase"
      primer_bind     complement(2896..2910)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -9468,6 +10390,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59817.1"
      terminator      3596..3700
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     CDS             complement(1144..2292)
+                     /product="replication protein"
+     terminator      join(3596..3701,1..280)
+                     /note="T1"
+     primer_bind     complement(join(1..161,3558..3701))
+                     /note="F24"
+     CDS             497..1030
+                     /product="gentamicin-3-acetyltransferase"
      primer_bind     complement(3596..3610)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -9645,6 +10583,28 @@ FEATURES             Location/Qualifiers
                      /note="PlacUV5"
      terminator      5507..5611
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     terminator      join(5507..5612,1..2191)
+                     /note="T1"
+     CDS             complement(join(1..374,2844..5612))
+                     /product="replication protein"
+     CDS             complement(2117..2956)
+                     /product="replication protein"
+     CDS             complement(635..1606)
+                     /product="replication protein"
+     promoter        complement(581..610)
+                     /note="PlacUV5"
+     primer_bind     complement(join(1..2072,5469..5612))
+                     /note="F24"
+     CDS             436..1554
+                     /product="tetracycline efflux transporter"
      primer_bind     complement(5507..5521)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -9826,6 +10786,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59810.1"
      terminator      3802..3906
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     terminator      join(3802..3907,1..486)
+                     /note="T1"
+     primer_bind     complement(join(1..367,3764..3907))
+                     /note="F24"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             436..1554
+                     /product="tetracycline efflux transporter"
      primer_bind     complement(3802..3816)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -9980,6 +10956,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59808.1"
      terminator      3355..3459
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     terminator      join(3355..3460,1..39)
+                     /note="T1"
+     primer_bind     complement(3317..3340)
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             436..1554
+                     /product="tetracycline efflux transporter"
      primer_bind     complement(3355..3369)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -10127,6 +11119,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59806.1"
      terminator      4055..4159
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     CDS             complement(1144..2292)
+                     /product="replication protein"
+     terminator      join(4055..4160,1..739)
+                     /note="T1"
+     primer_bind     complement(join(1..620,4017..4160))
+                     /note="F24"
+     CDS             436..1554
+                     /product="tetracycline efflux transporter"
      primer_bind     complement(4055..4069)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -10313,6 +11321,28 @@ FEATURES             Location/Qualifiers
                      /note="PlacUV5"
      terminator      5015..5119
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     terminator      join(5015..5120,1..1699)
+                     /note="T1"
+     CDS             complement(join(1..374,2844..5120))
+                     /product="replication protein"
+     CDS             complement(2117..2956)
+                     /product="replication protein"
+     CDS             complement(635..1606)
+                     /product="replication protein"
+     promoter        complement(581..610)
+                     /note="PlacUV5"
+     primer_bind     complement(join(1..1580,4977..5120))
+                     /note="F24"
+     CDS             400..1059
+                     /product="chloramphenicol acetyltransferase"
      primer_bind     complement(4670..4684)
                      /note="CAT.rev"
      primer_bind     complement(5015..5029)
@@ -10481,6 +11511,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59788.1"
      terminator      3310..3414
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     terminator      3310..3414
+                     /note="T1"
+     primer_bind     complement(3272..3295)
+                     /note="F24"
+     CDS             400..1059
+                     /product="chloramphenicol acetyltransferase"
+     CDS             complement(522..1364)
+                     /product="replication protein"
      primer_bind     complement(2965..2979)
                      /note="CAT.rev"
      primer_bind     complement(3310..3324)
@@ -10621,6 +11667,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59786.1"
      terminator      2863..2967
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     terminator      2863..2967
+                     /note="T1"
+     primer_bind     complement(2825..2848)
+                     /note="F24"
+     CDS             400..1059
+                     /product="chloramphenicol acetyltransferase"
+     CDS             complement(980..1642)
+                     /product="replication protein"
      primer_bind     complement(2518..2532)
                      /note="CAT.rev"
      primer_bind     complement(2863..2877)
@@ -10755,6 +11817,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59784.1"
      terminator      3563..3667
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     CDS             complement(1144..2292)
+                     /product="replication protein"
+     terminator      join(3563..3668,1..247)
+                     /note="T1"
+     primer_bind     complement(join(1..128,3525..3668))
+                     /note="F24"
+     CDS             400..1059
+                     /product="chloramphenicol acetyltransferase"
      primer_bind     complement(3218..3232)
                      /note="CAT.rev"
      primer_bind     complement(3563..3577)
@@ -10932,6 +12010,28 @@ FEATURES             Location/Qualifiers
                      /note="PlacUV5"
      terminator      5170..5274
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     CDS             381..1196
+                     /product="neomycin phosphotransferase"
+     terminator      join(5170..5275,1..1854)
+                     /note="T1"
+     CDS             complement(join(1..374,2844..5275))
+                     /product="replication protein"
+     CDS             complement(2117..2956)
+                     /product="replication protein"
+     CDS             complement(635..1606)
+                     /product="replication protein"
+     promoter        complement(581..610)
+                     /note="PlacUV5"
+     primer_bind     complement(join(1..1735,5132..5275))
+                     /note="F24"
      primer_bind     complement(5170..5184)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -11103,6 +12203,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59777.1"
      terminator      3465..3569
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     CDS             381..1196
+                     /product="neomycin phosphotransferase"
+     terminator      join(3465..3570,1..149)
+                     /note="T1"
+     primer_bind     complement(join(1..30,3427..3570))
+                     /note="F24"
+     CDS             complement(522..1364)
+                     /product="replication protein"
      primer_bind     complement(3465..3479)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -11247,6 +12363,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59775.1"
      terminator      3018..3122
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     CDS             381..1196
+                     /product="neomycin phosphotransferase"
+     terminator      3018..3122
+                     /note="T1"
+     primer_bind     complement(2980..3003)
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
      primer_bind     complement(3018..3032)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -11385,6 +12517,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59773.1"
      terminator      3718..3822
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     CDS             381..1196
+                     /product="neomycin phosphotransferase"
+     CDS             complement(1144..2292)
+                     /product="replication protein"
+     terminator      join(3718..3823,1..402)
+                     /note="T1"
+     primer_bind     complement(join(1..283,3680..3823))
+                     /note="F24"
      primer_bind     complement(3718..3732)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -11565,6 +12713,28 @@ FEATURES             Location/Qualifiers
                      /note="PlacUV5"
      terminator      5271..5375
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     terminator      join(5271..5376,1..1955)
+                     /note="T1"
+     CDS             complement(join(1..374,2844..5376))
+                     /product="replication protein"
+     CDS             complement(2117..2956)
+                     /product="replication protein"
+     CDS             complement(635..1606)
+                     /product="replication protein"
+     promoter        complement(581..610)
+                     /note="PlacUV5"
+     primer_bind     complement(join(1..1836,5233..5376))
+                     /note="F24"
+     CDS             414..1274
+                     /product="beta-lactamase"
      primer_bind     complement(5271..5285)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -11737,6 +12907,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59766.1"
      terminator      3566..3670
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     terminator      join(3566..3671,1..250)
+                     /note="T1"
+     primer_bind     complement(join(1..131,3528..3671))
+                     /note="F24"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             414..1274
+                     /product="beta-lactamase"
      primer_bind     complement(3566..3580)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -11882,6 +13068,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59764.1"
      terminator      3119..3223
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     terminator      3119..3223
+                     /note="T1"
+     primer_bind     complement(3081..3104)
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             414..1274
+                     /product="beta-lactamase"
      primer_bind     complement(3119..3133)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -12020,6 +13222,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59762.1"
      terminator      3819..3923
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     CDS             complement(1144..2292)
+                     /product="replication protein"
+     terminator      join(3819..3924,1..503)
+                     /note="T1"
+     primer_bind     complement(join(1..384,3781..3924))
+                     /note="F24"
+     CDS             414..1274
+                     /product="beta-lactamase"
      primer_bind     complement(3819..3833)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -12185,6 +13403,24 @@ FEATURES             Location/Qualifiers
                      /protein_id="AGR55424.1"
      terminator      5035..5139
                      /note="T1"
+     rep_origin      11
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     terminator      2109..2211
+                     /note="T0"
+     terminator      join(5035..5140,1..1719)
+                     /note="T1"
+     CDS             complement(join(1..1702,4157..5140))
+                     /product="XylS"
+     promoter        1925..1977
+                     /note="Pm"
+     primer_bind     complement(3039..3062)
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             2329..3234
+                     /product="spectinomycin adenyltransferase"
      primer_bind     complement(3077..3091)
                      /note="M13(-40)"
 ORIGIN
@@ -12369,6 +13605,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AGR55415.1"
      terminator      4504..4608
                      /note="T1"
+     rep_origin      11
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     terminator      1578..1680
+                     /note="T0"
+     terminator      join(4504..4609,1..1188)
+                     /note="T1"
+     primer_bind     complement(3039..3062)
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             1798..2703
+                     /product="spectinomycin adenyltransferase"
+     CDS             89..1171
+                     /product="LacIq"
+     promoter        1403..1432
+                     /note="Ptrc"
+     protein_bind    1438..1458
+                     /bound_moiety="lacO"
      primer_bind     complement(4517..4531)
                      /note="LacI.rev"
      primer_bind     complement(3077..3091)
@@ -12549,6 +13805,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AGR55412.1"
      terminator      5204..5308
                      /note="T1"
+     rep_origin      11
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     terminator      1578..1680
+                     /note="T0"
+     CDS             complement(1144..2292)
+                     /product="replication protein"
+     terminator      join(5204..5309,1..1888)
+                     /note="T1"
+     primer_bind     complement(join(1..342,3739..5309))
+                     /note="F24"
+     CDS             1798..2703
+                     /product="spectinomycin adenyltransferase"
+     CDS             89..1171
+                     /product="LacIq"
+     promoter        1403..1432
+                     /note="Ptrc"
+     protein_bind    1438..1458
+                     /bound_moiety="lacO"
      primer_bind     complement(5217..5231)
                      /note="LacI.rev"
      primer_bind     complement(3777..3791)
@@ -12737,6 +14013,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AGR55409.1"
      terminator      4445..4549
                      /note="T1"
+     rep_origin      11
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     terminator      1578..1680
+                     /note="T0"
+     CDS             1808..2623
+                     /product="neomycin phosphotransferase"
+     terminator      join(4445..4550,1..1129)
+                     /note="T1"
+     primer_bind     complement(2980..3003)
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             89..1171
+                     /product="LacIq"
+     promoter        1403..1432
+                     /note="Ptrc"
+     protein_bind    1438..1458
+                     /bound_moiety="lacO"
      primer_bind     complement(4458..4472)
                      /note="LacI.rev"
      primer_bind     complement(3018..3032)
@@ -12917,6 +14213,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AGR55406.1"
      terminator      5145..5249
                      /note="T1"
+     rep_origin      11
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     terminator      1578..1680
+                     /note="T0"
+     CDS             1808..2623
+                     /product="neomycin phosphotransferase"
+     CDS             complement(1144..2292)
+                     /product="replication protein"
+     terminator      join(5145..5250,1..1829)
+                     /note="T1"
+     primer_bind     complement(join(1..283,3680..5250))
+                     /note="F24"
+     CDS             89..1171
+                     /product="LacIq"
+     promoter        1403..1432
+                     /note="Ptrc"
+     protein_bind    1438..1458
+                     /bound_moiety="lacO"
      primer_bind     complement(5158..5172)
                      /note="LacI.rev"
      primer_bind     complement(3718..3732)
@@ -13110,6 +14426,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59873.1"
      terminator      3973..4077
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      join(3973..4078,1..657)
+                     /note="T1"
+     primer_bind     complement(join(1..330,3727..4078))
+                     /note="F24"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     CDS             820..1725
+                     /product="spectinomycin adenyltransferase"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(3785..3799)
                      /note="M13(-21).for"
      primer_bind     complement(3765..3779)
@@ -13293,6 +14629,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59870.1"
      terminator      3973..4077
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      join(3973..4078,1..657)
+                     /note="T1"
+     primer_bind     complement(join(1..330,3727..4078))
+                     /note="F24"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     CDS             820..1725
+                     /product="spectinomycin adenyltransferase"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(3785..3799)
                      /note="M13(-21).for"
      primer_bind     complement(3765..3779)
@@ -13475,6 +14831,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59867.1"
      terminator      3526..3630
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      join(3526..3631,1..210)
+                     /note="T1"
+     primer_bind     complement(3280..3303)
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     CDS             820..1725
+                     /product="spectinomycin adenyltransferase"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(3338..3352)
                      /note="M13(-21).for"
      primer_bind     complement(3318..3332)
@@ -13648,6 +15024,26 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59864.1"
      terminator      3526..3630
                      /note="T1"
+     rep_origin      9
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     204..227
+                     /note="R24"
+     terminator      600..702
+                     /note="T0"
+     terminator      join(3526..3631,1..210)
+                     /note="T1"
+     primer_bind     complement(3280..3303)
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             235..558
+                     /product="LacZa"
+     CDS             820..1725
+                     /product="spectinomycin adenyltransferase"
+     protein_bind    197..217
+                     /bound_moiety="lacO"
      primer_bind     complement(3338..3352)
                      /note="M13(-21).for"
      primer_bind     complement(3318..3332)
@@ -13842,6 +15238,28 @@ FEATURES             Location/Qualifiers
                      /note="PlacUV5"
      terminator      5229..5333
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     terminator      join(5229..5334,1..1913)
+                     /note="T1"
+     CDS             complement(join(1..374,2844..5334))
+                     /product="replication protein"
+     CDS             complement(2117..2956)
+                     /product="replication protein"
+     CDS             complement(635..1606)
+                     /product="replication protein"
+     promoter        complement(581..610)
+                     /note="PlacUV5"
+     primer_bind     complement(join(1..1794,5191..5334))
+                     /note="F24"
+     CDS             371..1276
+                     /product="spectinomycin adenyltransferase"
      primer_bind     complement(5229..5243)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -14024,6 +15442,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59799.1"
      terminator      3524..3628
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     terminator      join(3524..3629,1..208)
+                     /note="T1"
+     primer_bind     complement(join(1..89,3486..3629))
+                     /note="F24"
+     CDS             complement(522..1364)
+                     /product="replication protein"
+     CDS             371..1276
+                     /product="spectinomycin adenyltransferase"
      primer_bind     complement(3524..3538)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -14179,6 +15613,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59797.1"
      terminator      3077..3181
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     terminator      3077..3181
+                     /note="T1"
+     primer_bind     complement(3039..3062)
+                     /note="F24"
+     CDS             complement(980..1642)
+                     /product="replication protein"
+     CDS             371..1276
+                     /product="spectinomycin adenyltransferase"
      primer_bind     complement(3077..3091)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -14328,6 +15778,22 @@ FEATURES             Location/Qualifiers
                      /protein_id="AFV59795.1"
      terminator      3777..3881
                      /note="T1"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     9..32
+                     /note="R24"
+     terminator      151..253
+                     /note="T0"
+     CDS             complement(1144..2292)
+                     /product="replication protein"
+     terminator      join(3777..3882,1..461)
+                     /note="T1"
+     primer_bind     complement(join(1..342,3739..3882))
+                     /note="F24"
+     CDS             371..1276
+                     /product="spectinomycin adenyltransferase"
      primer_bind     complement(3777..3791)
                      /note="M13(-40)"
      primer_bind     17..31
@@ -14467,6 +15933,33 @@ FEATURES             Location/Qualifiers
                      /note="tNOS; nopaline synthase terminator (tNOS)"
      misc_feature    4848..4896
                      /note="RB; T-DNA right border"
+     rep_origin      1
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(18)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     complement(369..392)
+                     /note="R24"
+     primer_bind     join(3812..4897,1..415)
+                     /note="F24"
+     protein_bind    complement(362..382)
+                     /bound_moiety="lacO"
+     CDS             complement(join(1..653,3258..4897))
+                     /product="nptI"
+     rep_origin      1985..2401
+                     /note="pSa ORI; pSa origin or replication"
+     terminator      complement(2121..2366)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     promoter        complement(1223..1526)
+                     /note="pNOS; nopaline synthase (NOS) promoter"
+     terminator      join(4179..4897,1..998)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     terminator      complement(2121..2365)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     promoter        complement(1223..1517)
+                     /note="pNOS; nopaline synthase (NOS) promoter"
+     rep_origin      join(4886..4897,1..2196)
+                     /note="ColE; high copy number E. coli origin of
+                     replication"
      primer_bind     4061..4075
                      /note="35S"
      primer_bind     complement(187..201)
@@ -14654,6 +16147,25 @@ FEATURES             Location/Qualifiers
                      /note="tNOS; nopaline synthase terminator (tNOS)"
      misc_feature    5694..5742
                      /note="RB; T-DNA right border"
+     rep_origin      1
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(18)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     join(4523..5743,1..1126)
+                     /note="F24"
+     CDS             complement(join(1..1499,4104..5743))
+                     /product="nptI"
+     rep_origin      1985..2401
+                     /note="pSa ORI; pSa origin or replication"
+     terminator      join(5433..5743,1..2252)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     CDS             join(2857..5743,1..555)
+                     /product="Hyg"
+     CDS             join(4691..5743,1..1990)
+                     /product="sCFP"
+     rep_origin      join(5732..5743,1..3042)
+                     /note="ColE; high copy number E. coli origin of
+                     replication"
      primer_bind     2879..2893
                      /note="35S"
      primer_bind     5351..5365
@@ -14851,6 +16363,29 @@ FEATURES             Location/Qualifiers
                      /note="tNOS; nopaline synthase terminator (tNOS)"
      misc_feature    5126..5174
                      /note="RB; T-DNA right border"
+     rep_origin      1
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(18)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     join(3955..5175,1..558)
+                     /note="F24"
+     CDS             complement(join(1..931,3536..5175))
+                     /product="nptI"
+     terminator      join(4865..5175,1..1684)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     CDS             join(4123..5175,1..1422)
+                     /product="sCFP"
+     rep_origin      1985..2395
+                     /note="pSa ORI; pSa origin or replication"
+     terminator      complement(2394..2638)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     CDS             complement(1551..2345)
+                     /product="nptII"
+     promoter        complement(1255..1549)
+                     /note="pNOS; nopaline synthase (NOS) promoter"
+     rep_origin      join(5164..5175,1..2474)
+                     /note="ColE; high copy number E. coli origin of
+                     replication"
      primer_bind     4783..4797
                      /note="EGFP-C"
      primer_bind     complement(1023..1037)
@@ -15042,6 +16577,33 @@ FEATURES             Location/Qualifiers
                      /note="tNOS; nopaline synthase terminator (tNOS)"
      misc_feature    4986..5034
                      /note="RB; T-DNA right border"
+     rep_origin      1
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(18)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     join(3812..5035,1..415)
+                     /note="F24"
+     CDS             complement(join(1..791,3396..5035))
+                     /product="nptI"
+     rep_origin      1985..2401
+                     /note="pSa ORI; pSa origin or replication"
+     terminator      complement(2259..2504)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     promoter        complement(1361..1664)
+                     /note="pNOS; nopaline synthase (NOS) promoter"
+     terminator      join(4725..5035,1..1544)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     CDS             join(3983..5035,1..1282)
+                     /product="sCFP"
+     terminator      complement(2259..2503)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     promoter        complement(1361..1655)
+                     /note="pNOS; nopaline synthase (NOS) promoter"
+     CDS             complement(1665..2216)
+                     /product="BAR"
+     rep_origin      join(5024..5035,1..2334)
+                     /note="ColE; high copy number E. coli origin of
+                     replication"
      primer_bind     4643..4657
                      /note="EGFP-C"
      primer_bind     complement(1023..1037)
@@ -15225,6 +16787,25 @@ FEATURES             Location/Qualifiers
                      /note="tNOS; nopaline synthase terminator (tNOS)"
      misc_feature    5694..5742
                      /note="RB; T-DNA right border"
+     rep_origin      1
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(18)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     join(4523..5743,1..1126)
+                     /note="F24"
+     CDS             complement(join(1..1499,4104..5743))
+                     /product="nptI"
+     rep_origin      1985..2401
+                     /note="pSa ORI; pSa origin or replication"
+     terminator      join(5433..5743,1..2252)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     CDS             join(2857..5743,1..555)
+                     /product="Hyg"
+     CDS             join(4691..5743,1..1990)
+                     /product="sYFP"
+     rep_origin      join(5732..5743,1..3042)
+                     /note="ColE; high copy number E. coli origin of
+                     replication"
      primer_bind     2879..2893
                      /note="35S"
      primer_bind     5351..5365
@@ -15422,6 +17003,29 @@ FEATURES             Location/Qualifiers
                      /note="tNOS; nopaline synthase terminator (tNOS)"
      misc_feature    5126..5174
                      /note="RB; T-DNA right border"
+     rep_origin      1
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(18)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     join(3955..5175,1..558)
+                     /note="F24"
+     CDS             complement(join(1..931,3536..5175))
+                     /product="nptI"
+     terminator      join(4865..5175,1..1684)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     rep_origin      1985..2395
+                     /note="pSa ORI; pSa origin or replication"
+     terminator      complement(2394..2638)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     CDS             complement(1551..2345)
+                     /product="nptII"
+     promoter        complement(1255..1549)
+                     /note="pNOS; nopaline synthase (NOS) promoter"
+     CDS             join(4123..5175,1..1422)
+                     /product="sYFP"
+     rep_origin      join(5164..5175,1..2474)
+                     /note="ColE; high copy number E. coli origin of
+                     replication"
      primer_bind     4783..4797
                      /note="EGFP-C"
      primer_bind     complement(1023..1037)
@@ -15613,6 +17217,33 @@ FEATURES             Location/Qualifiers
                      /note="tNOS; nopaline synthase terminator (tNOS)"
      misc_feature    4986..5034
                      /note="RB; T-DNA right border"
+     rep_origin      1
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(18)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     join(3812..5035,1..415)
+                     /note="F24"
+     CDS             complement(join(1..791,3396..5035))
+                     /product="nptI"
+     rep_origin      1985..2401
+                     /note="pSa ORI; pSa origin or replication"
+     terminator      complement(2259..2504)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     promoter        complement(1361..1664)
+                     /note="pNOS; nopaline synthase (NOS) promoter"
+     terminator      join(4725..5035,1..1544)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     terminator      complement(2259..2503)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     promoter        complement(1361..1655)
+                     /note="pNOS; nopaline synthase (NOS) promoter"
+     CDS             complement(1665..2216)
+                     /product="BAR"
+     CDS             join(3983..5035,1..1282)
+                     /product="sYFP"
+     rep_origin      join(5024..5035,1..2334)
+                     /note="ColE; high copy number E. coli origin of
+                     replication"
      primer_bind     4643..4657
                      /note="EGFP-C"
      primer_bind     complement(1023..1037)
@@ -15798,6 +17429,27 @@ FEATURES             Location/Qualifiers
                      /note="tNOS; nopaline synthase terminator (tNOS)"
      misc_feature    5156..5204
                      /note="RB; T-DNA right border"
+     rep_origin      1
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(18)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     join(3955..5205,1..558)
+                     /note="F24"
+     CDS             complement(join(1..961,3566..5205))
+                     /product="nptI"
+     terminator      join(4895..5205,1..1714)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     rep_origin      1985..2395
+                     /note="pSa ORI; pSa origin or replication"
+     terminator      complement(2424..2668)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     CDS             complement(1581..2375)
+                     /product="nptII"
+     promoter        complement(1285..1579)
+                     /note="pNOS; nopaline synthase (NOS) promoter"
+     rep_origin      join(5194..5205,1..2504)
+                     /note="ColE; high copy number E. coli origin of
+                     replication"
      primer_bind     4813..4827
                      /note="EGFP-C"
      primer_bind     complement(1023..1037)
@@ -15989,6 +17641,31 @@ FEATURES             Location/Qualifiers
                      /note="tNOS; nopaline synthase terminator (tNOS)"
      misc_feature    5016..5064
                      /note="RB; T-DNA right border"
+     rep_origin      1
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(18)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     join(3812..5065,1..415)
+                     /note="F24"
+     CDS             complement(join(1..821,3426..5065))
+                     /product="nptI"
+     rep_origin      1985..2401
+                     /note="pSa ORI; pSa origin or replication"
+     terminator      complement(2289..2534)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     promoter        complement(1391..1694)
+                     /note="pNOS; nopaline synthase (NOS) promoter"
+     terminator      join(4755..5065,1..1574)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     terminator      complement(2289..2533)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     promoter        complement(1391..1685)
+                     /note="pNOS; nopaline synthase (NOS) promoter"
+     CDS             complement(1695..2246)
+                     /product="BAR"
+     rep_origin      join(5054..5065,1..2364)
+                     /note="ColE; high copy number E. coli origin of
+                     replication"
      primer_bind     4673..4687
                      /note="EGFP-C"
      primer_bind     complement(1023..1037)
@@ -16175,6 +17852,27 @@ FEATURES             Location/Qualifiers
                      /note="tNOS; nopaline synthase terminator (tNOS)"
      misc_feature    5156..5204
                      /note="RB; T-DNA right border"
+     rep_origin      1
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(18)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     join(3955..5205,1..558)
+                     /note="F24"
+     CDS             complement(join(1..961,3566..5205))
+                     /product="nptI"
+     terminator      join(4895..5205,1..1714)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     rep_origin      1985..2395
+                     /note="pSa ORI; pSa origin or replication"
+     terminator      complement(2424..2668)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     CDS             complement(1581..2375)
+                     /product="nptII"
+     promoter        complement(1285..1579)
+                     /note="pNOS; nopaline synthase (NOS) promoter"
+     rep_origin      join(5194..5205,1..2504)
+                     /note="ColE; high copy number E. coli origin of
+                     replication"
      primer_bind     4813..4827
                      /note="EGFP-C"
      primer_bind     complement(1023..1037)
@@ -16366,6 +18064,31 @@ FEATURES             Location/Qualifiers
                      /note="tNOS; nopaline synthase terminator (tNOS)"
      misc_feature    5016..5064
                      /note="RB; T-DNA right border"
+     rep_origin      1
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(18)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     join(3812..5065,1..415)
+                     /note="F24"
+     CDS             complement(join(1..821,3426..5065))
+                     /product="nptI"
+     rep_origin      1985..2401
+                     /note="pSa ORI; pSa origin or replication"
+     terminator      complement(2289..2534)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     promoter        complement(1391..1694)
+                     /note="pNOS; nopaline synthase (NOS) promoter"
+     terminator      join(4755..5065,1..1574)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     terminator      complement(2289..2533)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     promoter        complement(1391..1685)
+                     /note="pNOS; nopaline synthase (NOS) promoter"
+     CDS             complement(1695..2246)
+                     /product="BAR"
+     rep_origin      join(5054..5065,1..2364)
+                     /note="ColE; high copy number E. coli origin of
+                     replication"
      primer_bind     4673..4687
                      /note="EGFP-C"
      primer_bind     complement(1023..1037)
@@ -16560,6 +18283,25 @@ FEATURES             Location/Qualifiers
                      /note="tNOS; nopaline synthase terminator (tNOS)"
      misc_feature    6704..6752
                      /note="RB; T-DNA right border"
+     rep_origin      1
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(18)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     join(4058..6753,1..661)
+                     /note="F24"
+     terminator      join(6443..6753,1..3262)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     rep_origin      1985..2395
+                     /note="pSa ORI; pSa origin or replication"
+     terminator      complement(join(1..796,3972..6753))
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     CDS             complement(join(1..503,3129..6753))
+                     /product="nptII"
+     promoter        complement(2833..3127)
+                     /note="pNOS; nopaline synthase (NOS) promoter"
+     rep_origin      join(6742..6753,1..4052)
+                     /note="ColE; high copy number E. coli origin of
+                     replication"
      primer_bind     4915..4929
                      /note="EGFP-C"
      primer_bind     complement(1023..1037)
@@ -16764,6 +18506,23 @@ FEATURES             Location/Qualifiers
                      RRHPELAGSPRLRAYMLRIGLDQLYQSLVDGNFDDAAWAQGRCDAIVRSGAGTVGRTQI
                      ARRSAAVWTDGCVEVLADSGNRRPSTRPRAKE"
                      /protein_id="AIQ78251.1"
+     rep_origin      7
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(10)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     join(4967..5016,1..1570)
+                     /note="F24"
+     CDS             complement(join(1..328,2933..5016))
+                     /product="nptI"
+     rep_origin      2429..2845
+                     /note="pSa ORI; pSa origin or replication"
+     terminator      134..373
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     CDS             join(3301..5016,1..999)
+                     /product="Hyg"
+     rep_origin      433..1163
+                     /note="ColE; high copy number E. coli origin of
+                     replication"
      primer_bind     3323..3337
                      /note="35S"
      primer_bind     4996..5010
@@ -16931,6 +18690,27 @@ FEATURES             Location/Qualifiers
                      /protein_id="AIQ78249.1"
      promoter        complement(4258..4552)
                      /note="pNOS; nopaline synthase (NOS) promoter"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(4)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     138..161
+                     /note="F24"
+     CDS             complement(2285..3100)
+                     /product="nptI"
+     terminator      321..560
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     rep_origin      2616..3026
+                     /note="pSa ORI; pSa origin or replication"
+     terminator      complement(1143..1387)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     CDS             complement(300..1094)
+                     /product="nptII"
+     promoter        complement(4..298)
+                     /note="pNOS; nopaline synthase (NOS) promoter"
+     rep_origin      620..1350
+                     /note="ColE; high copy number E. coli origin of
+                     replication"
      primer_bind     167..181
                      /note="M13(-21).for"
      primer_bind     147..161
@@ -17093,6 +18873,29 @@ FEATURES             Location/Qualifiers
                      /protein_id="AIQ78247.1"
      promoter        complement(4002..4305)
                      /note="pNOS; nopaline synthase (NOS) promoter"
+     rep_origin      10
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(4)
+                     /note="ColE1-derived plasmid replication origin"
+     primer_bind     134..157
+                     /note="F24"
+     CDS             complement(2039..2854)
+                     /product="nptI"
+     rep_origin      2615..3031
+                     /note="pSa ORI; pSa origin or replication"
+     terminator      complement(902..1147)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     promoter        complement(4..307)
+                     /note="pNOS; nopaline synthase (NOS) promoter"
+     terminator      320..559
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     terminator      complement(902..1146)
+                     /note="tNOS; nopaline synthase terminator (tNOS)"
+     promoter        complement(4..298)
+                     /note="pNOS; nopaline synthase (NOS) promoter"
+     rep_origin      619..1349
+                     /note="ColE; high copy number E. coli origin of
+                     replication"
      primer_bind     163..177
                      /note="M13(-21).for"
      primer_bind     143..157
@@ -17272,6 +19075,26 @@ FEATURES             Location/Qualifiers
                      /note="R6K"
      terminator      3193..3297
                      /note="T1"
+     rep_origin      11
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     terminator      1578..1680
+                     /note="T0"
+     terminator      3193..3297
+                     /note="T1"
+     primer_bind     complement(1728..1751)
+                     /note="F24"
+     CDS             1924..2457
+                     /product="gentamicin-3-acetyltransferase"
+     CDS             89..1171
+                     /product="LacIq"
+     promoter        1403..1432
+                     /note="Ptrc"
+     protein_bind    1438..1458
+                     /bound_moiety="lacO"
+     rep_origin      2787..3178
+                     /note="R6K"
      primer_bind     complement(3206..3220)
                      /note="LacI.rev"
      primer_bind     complement(1766..1780)
@@ -17427,6 +19250,26 @@ FEATURES             Location/Qualifiers
                      /note="R6K"
      terminator      3652..3756
                      /note="T1"
+     rep_origin      11
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     terminator      1578..1680
+                     /note="T0"
+     terminator      join(3652..3757,1..336)
+                     /note="T1"
+     primer_bind     complement(2187..2210)
+                     /note="F24"
+     CDS             1863..2981
+                     /product="tetracycline efflux transporter"
+     CDS             89..1171
+                     /product="LacIq"
+     promoter        1403..1432
+                     /note="Ptrc"
+     protein_bind    1438..1458
+                     /bound_moiety="lacO"
+     rep_origin      join(3246..3757,1..217)
+                     /note="R6K"
      primer_bind     complement(3665..3679)
                      /note="LacI.rev"
      primer_bind     complement(2225..2239)
@@ -17593,6 +19436,26 @@ FEATURES             Location/Qualifiers
                      /note="R6K"
      terminator      3374..3478
                      /note="T1"
+     rep_origin      11
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     terminator      1578..1680
+                     /note="T0"
+     terminator      join(3374..3479,1..58)
+                     /note="T1"
+     primer_bind     complement(1909..1932)
+                     /note="F24"
+     CDS             1798..2703
+                     /product="spectinomycin adenyltransferase"
+     CDS             89..1171
+                     /product="LacIq"
+     promoter        1403..1432
+                     /note="Ptrc"
+     protein_bind    1438..1458
+                     /bound_moiety="lacO"
+     rep_origin      2968..3359
+                     /note="R6K"
      primer_bind     complement(3387..3401)
                      /note="LacI.rev"
      primer_bind     complement(1947..1961)
@@ -17749,6 +19612,26 @@ FEATURES             Location/Qualifiers
                      /note="R6K"
      terminator      3315..3419
                      /note="T1"
+     rep_origin      11
+                     /note="ColE1-derived plasmid replication origin"
+     rep_origin      complement(2)
+                     /note="ColE1-derived plasmid replication origin"
+     terminator      1578..1680
+                     /note="T0"
+     CDS             1808..2623
+                     /product="neomycin phosphotransferase"
+     terminator      3315..3419
+                     /note="T1"
+     primer_bind     complement(1850..1873)
+                     /note="F24"
+     CDS             89..1171
+                     /product="LacIq"
+     promoter        1403..1432
+                     /note="Ptrc"
+     protein_bind    1438..1458
+                     /bound_moiety="lacO"
+     rep_origin      2909..3300
+                     /note="R6K"
      primer_bind     complement(3328..3342)
                      /note="LacI.rev"
      primer_bind     complement(1888..1902)

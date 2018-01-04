@@ -31,9 +31,9 @@ class SequenceRepository:
         for qualifier in qualifier_list:
             self.qualifiers.append(qualifier)
 
-    def appendQualifierValues(self,qualifier_value_list):
+    def appendQualifierValues(self,qualifier_value_list,key):
         for qualifier_value in qualifier_value_list:
-            self.qualifier_values.append(qualifier_value)
+            self.qualifier_values.append(key+":"+qualifier_value)
 
     def setCommonQualifier(self,qualifier):
         self.common_qualifier = qualifier

@@ -5,27 +5,40 @@
 from SequenceRepository import SequenceRepository
 import csv
 from collections import Counter
-
+from Annotator import *
 
 class CommonFeatures:
 
     def extractFeatures(self, plasmid_records):
         
-        def writeCSVFile(list_of_sequence):
-            file = csv.writer(open("common_features.csv", "w+"))
-            header_keys = ['seq', 'feature_type', 'common_qualifier', 'count']
-            file.writerow(header_keys)
-            for sequence in list_of_sequence:
-                if sequence.getCount() > 2 and len(sequence.getSequence()) >= 4:
-                    write_row = list()
-                    write_row.append(sequence.getSequence())
-                    write_row.append(sequence.getFeature_type())
-                    write_row.append(sequence.getCommonQualifier())
-                    write_row.append(sequence.getCount())
-                    file.writerow(write_row)
-                    #file.close()
-            print("---------File:" + " common_features.csv " + "created---------")
+        def annotateSequences(list_of_sequence):
+            for plasmid in plasmid_records:
+                for sequenceObject in list_of_sequence:
+                    sequence = sequenceObject.getSequence()
+                    doubled_plasmid = plasmid.seq + plasmid.seq
+                    search = doubled_plasmid.find(sequence)
 
+                    if search > -1:
+                        start_pos = search
+                        end_pos = start_pos + len(sequence)
+                        end_pos = Annotator().evaluateEndPosition(end_pos, plasmid,len(record))
+                        if(sequenceObject.getCommonQualifier()!=""):
+                            key = sequenceObject.getCommonQualifier().split(':')[0]
+                            value = sequenceObject.getCommonQualifier().split(':')[1]
+                            qualifier = {key: value}
+                            Annotator().appendFeatures(plasmid, start_pos, end_pos, 1, sequenceObject.getFeature_type(), qualifier, 'join')
+
+                    search = doubled_plasmid.reverse_complement().find(sequence)
+                    if search > -1:
+                        start_pos = search
+                        end_pos = start_pos + len(sequence)
+                        end_pos = Annotator().evaluateEndPosition(end_pos, plasmid,len(record))
+                        if(sequenceObject.getCommonQualifier()!=""):
+                            key = sequenceObject.getCommonQualifier().split(':')[0]
+                            value = sequenceObject.getCommonQualifier().split(':')[1]
+                            qualifier = {key: value}
+                            Annotator().appendFeatures(plasmid, start_pos, end_pos, -1, sequenceObject.getFeature_type(),qualifier, 'join')
+            Annotator().writeGeneBankFile(plasmid_records,"common_features.gb")
         list_of_sequence = []
 
         list_of_feature_types = ['promoter', 'oriT', 'rep_origin', 'primer_bind', 'terminator', 'misc_signal','misc_recomb','LTR', 'enhancer', '-35_signal', '-10_signal', 'RBS', 'polyA_signal', 'sig_peptide', 'CDS','protein_bind', 'misc_binding', 'mobile_element', 'mRNA', 'tRNA', 'rRNA']
@@ -41,7 +54,7 @@ class CommonFeatures:
                                     if sequence.getSequence() == feature.extract(record.seq) and sequence.getFeature_type() == feature.type:
                                         sequence.incrementCount()
                                         for qualifier in feature.qualifiers.keys():
-                                                sequence.appendQualifierValues(feature.qualifiers[qualifier])
+                                                sequence.appendQualifierValues(feature.qualifiers[qualifier],qualifier)
                                         sequence.appendQualifiers(feature.qualifiers.keys())
                                         check = True
                             if not check:
@@ -115,4 +128,4 @@ class CommonFeatures:
                 common_qualifier,num_most_qualifier = Counter(sequence.getQualifierValues()).most_common(1)[0]
                 sequence.setCommonQualifier(common_qualifier)
             
-        writeCSVFile(list_of_sequence)
+        annotateSequences(list_of_sequence)
