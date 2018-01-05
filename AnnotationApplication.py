@@ -33,8 +33,8 @@ def main(argv):
 
     LEARNING_FILE = "InputFiles/vectors.gb"
     vectors = SeqIO.parse(LEARNING_FILE,"genbank")
-    common_primer_file = "common_primer.mfasta"
-    special_features = "tags_epitopes.mfasta"
+    common_primer_file = "InputFiles/common_primer.mfasta"
+    special_features = "InputFiles/tags_epitopes.mfasta"
 
     common_primer_records = list(SeqIO.parse(common_primer_file, "fasta"))
     special_features_records = list(SeqIO.parse(special_features, "fasta"))
